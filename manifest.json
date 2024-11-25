@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Chainstack DLP",
+  "name": "Arcs DLP",
   "description": "This extension redacts sensitive data in the user input for ChatGPT allowing a form of Data Leak Protection.",
   "version": "1.0",
   "permissions": ["storage", "activeTab", "scripting"],
