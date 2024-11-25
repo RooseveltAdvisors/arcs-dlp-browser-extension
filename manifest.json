@@ -4,7 +4,7 @@
   "description": "This extension redacts sensitive data in the user input for ChatGPT allowing a form of Data Leak Protection.",
   "version": "1.0",
   "permissions": ["storage", "activeTab", "scripting"],
-  "host_permissions": ["https://chat.openai.com/*"],
+  "host_permissions": ["https://chat.openai.com/*", "https://chatgpt.com/*"],
   "icons": {
      "16": "icons/icon16.png",
      "32": "icons/icon32.png",
@@ -21,7 +21,7 @@
   "web_accessible_resources": [
     {
       "resources": ["dist/bundle.js"],
-      "matches": ["https://chat.openai.com/*"],
+      "matches": ["https://chat.openai.com/*", "https://chatgpt.com/*"],
       "use_dynamic_url": false
     }
   ]
