@@ -147,16 +147,23 @@ if (!window.hasRun) {
       inputBox.addEventListener("input", function () {
         clearTimeout(debounceTimeout);
         debounceTimeout = setTimeout(function () {
-          const text = inputBox.value;
-          if (text !== lastInput) {
-            const { redactedText, tokenCount } = redactAndCount(text); 
-
-            previewBox.textContent = redactedText;
-            tokenCountElement.textContent = "Token count: " + tokenCount;
-
-            lastInput = text;
-          }
-        }, DEBOUNCE_DELAY);
+              let text;
+      
+              if (inputBox.tagName === 'INPUT' || inputBox.tagName === 'TEXTAREA') {
+                  text = inputBox.value;
+              } else {
+                  text = inputBox.innerText; // or inputBox.textContent
+              }
+      
+              if (text !== lastInput) {
+                  const { redactedText, tokenCount } = redactAndCount(text);
+      
+                  previewBox.textContent = redactedText;
+                  tokenCountElement.textContent = "Token count: " + tokenCount;
+      
+                  lastInput = text;
+              }
+          }, DEBOUNCE_DELAY);
       });
 
       // Keydown Event Listener
