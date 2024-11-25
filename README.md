@@ -55,7 +55,7 @@ The Chainstack DLP tool employs regular expression patterns to detect potentiall
 
    - Open the Extension Management page by navigating to `chrome://extensions`. Alternatively, open this page by clicking browser settings > Extensions > Manage extensions.
    - Enable Developer Mode by clicking the toggle switch next to Developer mode.
-   - Click the ` Load unpacked`` button and select the extension directory,  `chainstack-dlp` in this case.
+   - Click the `Load unpacked` button and select the extension directory,  `arcs-dlp-browser-extension` in this case.
 
 Now, your browser extension is installed and ready to use.
 
